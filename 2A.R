@@ -1,15 +1,15 @@
-# Load libraries and data
 library(arules)
 
-print("Here is the following range of each column from 2-14")
+print("Temos o seguinte alcance para cada coluna desde 2-14")
 
 for (i in 2:14){
   
-  values <- arules::discretize(wine[,i], method = "interval", breaks = 3)
+  values <- arules::discretize(wine[,i], method = "intervalo", breaks = 3)
   
-  # Print the resulting categories
-  print(paste("Column", i))
+
+  print(paste("Coluna", i))
   print(levels(values))
 
 }
+
 
